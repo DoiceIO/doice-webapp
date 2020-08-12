@@ -1,0 +1,61 @@
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #727272 #303030;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #727272;
+}
+
+.vue-notification {
+  padding: 10px;
+  margin: 0 5px 5px;
+  z-index: 1040;
+  font-size: 12px;
+
+  color: #ffffff;
+  background: #44a4fc;
+  border-left: 5px solid #187fe7;
+}
+
+.notification-title {
+  font-weight: bold;
+}
+
+.vue-notification .warn {
+  background: #ffb648;
+  border-left-color: #f48a06;
+}
+
+.vue-notification .error {
+  background: #e54d42;
+  border-left-color: #b82e24;
+}
+
+.vue-notification .success {
+  background: #42864a;
+  border-left-color: rgb(31, 100, 39);
+}
