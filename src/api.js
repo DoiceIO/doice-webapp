@@ -1,4 +1,4 @@
-const API_URL = process.env.VUE_APP_API_URL;
+const API_URL = process.env.VUE_APP_API_URL || window.location.origin;
 
 const http = {
   get(path, options = {}) {

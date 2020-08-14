@@ -2,7 +2,7 @@ import io from "socket.io-client";
 
 export default class Socket {
   constructor() {
-    this.socket = io(process.env.VUE_APP_API_URL);
+    this.socket = io(process.env.VUE_APP_API_URL || window.location.origin);
   }
 
   emit(event, data) {
