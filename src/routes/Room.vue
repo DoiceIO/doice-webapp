@@ -55,7 +55,7 @@
                 </d-btn>
                 <span class="ml-2">Match a face to your voice.</span>
               </li>
-              <li class="flex items-center">
+              <li class="flex items-center mb-2">
                 <d-btn
                   @click="
                     $store.dispatch('nav/showModal', { id: 'add-video-player' })
@@ -67,6 +67,19 @@
                   Add Synchronized Player
                 </d-btn>
                 <span class="ml-2">Watch videos together.</span>
+              </li>
+              <li class="flex items-center">
+                <d-btn
+                  @click="
+                    $store.dispatch('nav/showModal', { id: 'change-username' })
+                  "
+                  variant="none"
+                  class="p-btn inline-block rounded font-bold bg-dark-2 px-3 py-2"
+                >
+                  <span class="material-icons mr-2">badge</span>
+                  Change Your Name
+                </d-btn>
+                <span class="ml-2">Legally or illegally?</span>
               </li>
             </ul>
           </div>
