@@ -71,12 +71,17 @@ for (const filter in filters) {
   Vue.filter(filter, filters[filter]);
 }
 
+console.log({ socket });
+
+// Mount the app immediately, don't wait for socket connection
+// The app can handle socket connection state internally
 socket.on("connect", () => {
   window.socket = socket.socket;
-
-  new Vue({
-    store: store({ socket }),
-    router,
-    render: h => h(App)
-  }).$mount("#app");
 });
+
+// Mount Vue app regardless of socket connection status
+new Vue({
+  store: store({ socket }),
+  router,
+  render: h => h(App)
+}).$mount("#app");
